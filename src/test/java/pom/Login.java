@@ -21,6 +21,11 @@ public class Login {
         driver = driverObj;
     }
 
+    /**
+     * Use this method to login to the application
+     * @param username Accepted values are - accepted values are - username, user email, user mobile number
+     * @param password user password needs to be provided
+     */
     public void loginWithCredentials(String username, String password) {
 
         Reporter.log("username = " + username);

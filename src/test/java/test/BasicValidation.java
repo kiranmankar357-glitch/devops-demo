@@ -7,6 +7,9 @@ import org.testng.annotations.Test;
 
 public class BasicValidation extends BaseTest {
 	
+	/**
+	 * Test case to validate the page title
+	 */
 	@Test
 	public void titileValidation() {
 		String expectedTitle = "demosite";
@@ -18,6 +21,9 @@ public class BasicValidation extends BaseTest {
 		assertTrue(actualTitle.equals(expectedTitle), "Mismatch in the results, ");
 	}
 	
+	/**
+	 * Test case to validate the url of the page
+	 */
 	@Test
 	public void urlValidation() {
 		String expectedUrl = "https://demoqa.com/login";
