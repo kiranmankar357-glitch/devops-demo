@@ -6,8 +6,8 @@ import pom.Login;
 
 public class loginValidation extends BaseTest {
 	
-	
-	@Test(//Y1 change)
+	// stash demo - y11
+	@Test
 	public void validUsernameValidPasswordTest() {
 		String username = "kiran@gmail.com";
 		String password = "kiran123";
