@@ -22,7 +22,7 @@ public class BasicValidation extends BaseTest {
 	}
 	
 	/**
-	 * Test case to validate the url of the page
+	 * Test case to validate the url of the application
 	 */
 	@Test
 	public void urlValidation() {
