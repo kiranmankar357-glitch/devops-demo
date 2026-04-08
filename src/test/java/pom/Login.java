@@ -7,11 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 
+
+
 public class Login {
 
-    WebDriver driver;
-
-    // Constructor
+    WebDriver driver; 
+    
+    /**
+     * Please the driver object
+     * @param driverObj driver object
+     */
     public Login(WebDriver driverObj) {
         driver = driverObj;
     }
