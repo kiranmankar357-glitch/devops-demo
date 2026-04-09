@@ -13,15 +13,5 @@ test-output/
 *.log
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+# Allure results related
+allure-results/
