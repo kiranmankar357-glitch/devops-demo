@@ -1,48 +1,46 @@
 package pom;
 
-import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 
-
-
 public class Login {
 
-    WebDriver driver; 
-    
-    /**
-     * Please the driver object
-     * @param driverObj driver object
-     */
-    public Login(WebDriver driverObj) {
-        driver = driverObj;
-    }
+	WebDriver driver;
 
-    /**
-     * Use this method to login to the application
-     * @param username Accepted values are - accepted values are - username, user email, user mobile number
-     * @param password user password needs to be provided
-     */
-    public void loginWithCredentials(String username, String password) {
+	/**
+	 * Please the driver object
+	 * 
+	 * @param driverObj driver object
+	 */
+	public Login(WebDriver driverObj) {
+		driver = driverObj;
 
-        Reporter.log("username = " + username);
-        Reporter.log("password = " + password);
+		// ✔ Set implicit wait ONCE here (best practice)
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
 
-        WebElement email = driver.findElement(By.id("userName"));
-        WebElement pass = driver.findElement(By.id("password"));
-        WebElement loginBtn = driver.findElement(By.id("login")); // FIXED locator
+	/**
+	 * Use this method to login to the application
+	 */
+	public void loginWithCredentials(String username, String password) {
 
-        email.clear();
-        email.sendKeys(username);
+		Reporter.log("username = " + username);
+		Reporter.log("password = " + password);
 
-        pass.clear();
-        pass.sendKeys(password);
-        
-       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WebElement email = driver.findElement(By.id("userName"));
+		WebElement pass = driver.findElement(By.id("password"));
+		WebElement loginBtn = driver.findElement(By.id("login"));
 
-        loginBtn.click();
-    }
+		email.clear();
+		email.sendKeys(username);
+
+		pass.clear();
+		pass.sendKeys(password);
+
+		loginBtn.click();
+	}
 }
