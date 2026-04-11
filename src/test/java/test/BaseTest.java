@@ -17,13 +17,12 @@ public class BaseTest {
 	/**
 	 * This method is used to invoke the browser and open the AUT url
 	 */
-	@BeforeTest
 	public void beforeTest() {
-	//	driver = new ChromeDriver();
-		driver = null;
-		System.out.println("Driver initialized");
-		
-		driver.get("https://demoqa.com/login");	
+
+	    // Dummy setup (no browser)
+	    System.out.println("Driver initialized");
+
+	    // IMPORTANT: do NOT use driver anywhere
 	}
 	
 	/**
