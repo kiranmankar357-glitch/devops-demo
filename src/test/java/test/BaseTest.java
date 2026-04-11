@@ -20,6 +20,7 @@ public class BaseTest {
 	@BeforeTest
 	public void beforeTest() {
 	//	driver = new ChromeDriver();
+		driver = null;
 		System.out.println("Driver initialized");
 		
 		driver.get("https://demoqa.com/login");	
