@@ -5,6 +5,8 @@ import static org.testng.Assert.assertTrue;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
+import utils.Calculator;
+
 public class BasicValidation extends BaseTest {
 	
 	/**
@@ -33,6 +35,15 @@ public class BasicValidation extends BaseTest {
 		Reporter.log("Actual Result = " + actualUrl);
 		
 		assertTrue(actualUrl.equals(expectedUrl), "Mismatch in the results, ");
+	}
+	
+	@Test
+	public void testCalculator() {
+
+	    Calculator calc = new Calculator();
+	    int result = calc.add(2, 3);
+
+	    System.out.println("Result: " + result);
 	}
 
 }
